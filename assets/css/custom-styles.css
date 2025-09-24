@@ -1,1 +1,365 @@
-/* Custom stylesheet, add your own styles here */
+/* Ensure the masthead is transparent or positioned correctly */
+.masthead {
+    background: transparent !important;
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+/* Remove overlay-related styles to avoid conflicts */
+/*
+.masthead .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/assets/images/header.webp') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.masthead .overlay:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+*/
+
+/* Adjust first section to align with header */
+.site-section.first-section {
+    padding-top: 80px; /* Adjusted to account for masthead height */
+    margin-top: 0;
+    background: inherit;
+}
+
+/* Style the Contact Formulier button in the footer (assuming in _includes/footer.html) */
+.site-footer .btn--primary {
+    background-color: #87CEEB;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Ensure footer layout is centered and spaced (if needed in footer.html) */
+.site-footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.site-footer .btn {
+    margin-bottom: 10px;
+}
+
+/* Styling for the specialiteiten cards with blue background */
+.site-section#section-1 {
+    background-color: #0077BE;
+}
+
+.specialiteiten-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+    max-width: 1600px;
+    margin: 0 auto;
+    background: inherit;
+}
+
+.specialiteit-card {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white for contrast */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.specialiteit-card video,
+.specialiteit-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.specialiteit-card h4 {
+    color: white;
+    padding: 10px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2); /* Darker overlay for text readability */
+    margin: 0;
+}
+
+/* Hover effects */
+.specialiteit-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure smooth section transitions */
+.site-section {
+    background: inherit;
+    padding-bottom: 20px;
+    border: none;
+    padding-top: 80px; /* Ensure space for sticky masthead */
+}
+
+/* Waarom Ons Section */
+.notice {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.notice h4 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.notice p {
+    margin: 0;
+    color: #666;
+}
+
+.notice--primary { background: #e6f3ff; }
+.notice--success { background: #e8f5e9; }
+.notice--warning { background: #fff3e0; }
+.notice--danger { background: #ffebee; }
+.notice--info { background: #e1f5fe; }
+
+/* Onze Diensten Section */
+#servicesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: white;
+    border-radius: var(--border-radius, 12px);
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: var(--transition, all 0.3s cubic-bezier(0.4, 0, 0.2, 1));
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #0077BE, #00A8E8);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 119, 190, 0.15);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #0077BE, #00A8E8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.service-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.service-card p {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.service-features li {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.service-features i {
+    color: #4CAF50;
+    font-size: 0.9rem;
+}
+
+.service-card .word {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.service-card .word span {
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+
+.contact-form {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #0077BE;
+}
+
+.contact-info {
+    display: grid;
+    gap: 20px;
+}
+
+.info-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.info-card i {
+    font-size: 2rem;
+    color: #0077BE;
+    margin-bottom: 15px;
+}
+
+.info-card h4 {
+    margin-bottom: 10px;
+    color: #003459;
+}
+
+.info-card a {
+    color: #0077BE;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border: none;
+}
+
+.btn--primary {
+    background: linear-gradient(135deg, #0077BE, #00A8E8);
+    color: white;
+}
+
+.btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 119, 190, 0.3);
+}
+
+.btn--large {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .specialiteiten-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #servicesContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .specialiteiten-grid {
+        grid-template-columns: 1fr;
+    }
+    #servicesContainer {
+        grid-template-columns: 1fr;
+    }
+    .specialiteit-card video,
+    .specialiteit-card img {
+        height: auto;
+    }
+    .service-card {
+        font-size: 0.9em;
+        padding: 15px;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,35 +1,152 @@
 {% capture logo_path %}{{ site.logo }}{% endcapture %}
 
-<div class="masthead" style="opacity: {{site.masthead-opacity}} !important; {% if site.sticky-masthead %} position: sticky;{% endif %}">
+<div class="masthead" style="opacity: 1 !important; {% if site.sticky-masthead %} position: sticky; top: 0; z-index: 1000;{% endif %}; background: none; padding: 10px 20px; margin: 0; border: none;">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
+      <nav id="site-nav" class="greedy-nav" role="navigation" aria-label="Main Navigation">
         {% unless logo_path == empty %}
-          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+          <a class="site-logo" href="{{ '/' | relative_url }}" aria-label="{{ site.masthead_title | default: site.title }} Home">
+            <img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }} Logo" style="max-height: 60px; width: auto; transition: transform 0.3s ease;">
+          </a>
         {% endunless %}
-        <a class="site-title" href="{{ '/' | relative_url }}">
-          {{ site.masthead_title | default: site.title }}
-          {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
-        </a>
         <ul class="visible-links">
           {%- for link in site.data.navigation.main -%}
             <li class="masthead__menu-item">
-              <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %} {% if link.blank %} target="_blank" rel="noopener noreferrer nofollow"{% endif %}>{{ link.title }}</a>
+              <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %} {% if link.blank %} target="_blank" rel="noopener noreferrer nofollow"{% endif %} aria-current="page"{% if page.url == link.url %} class="active"{% endif %}>{{ link.title }}</a>
             </li>
           {%- endfor -%}
         </ul>
         {% if site.search == true %}
-        <button class="search__toggle" type="button">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
-          <i class="fas fa-search"></i>
+        <button class="search__toggle" type="button" aria-label="Toggle search" aria-expanded="false">
+          <i class="fas fa-search" aria-hidden="true"></i>
         </button>
         {% endif %}
-        <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
-          <div class="navicon"></div>
+        <button class="greedy-nav__toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="hidden-links">
+          <span class="navicon"></span>
         </button>
-        <ul class="hidden-links hidden"></ul>
+        <ul class="hidden-links" id="hidden-links"></ul>
       </nav>
     </div>
   </div>
 </div>
+
+<style>
+  .masthead {
+    color: #0077BE;
+    transition: opacity 0.3s ease;
+    overflow: hidden;
+  }
+  .masthead__inner-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .masthead__menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .site-logo {
+    margin-right: 20px;
+  }
+  .site-logo img:hover {
+    transform: scale(1.1);
+  }
+  .visible-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .masthead__menu-item {
+    margin-left: 20px;
+  }
+  .masthead__menu-item a {
+    color: #0077BE;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .masthead__menu-item a:hover, .masthead__menu-item a.active {
+    color: #00A8E8;
+    transform: translateY(-2px);
+  }
+  .greedy-nav__toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: none;
+  }
+  .navicon {
+    width: 25px;
+    height: 3px;
+    background: #0077BE;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  .navicon::before, .navicon::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: #0077BE;
+    transition: all 0.3s ease;
+  }
+  .navicon::before {
+    top: -8px;
+  }
+  .navicon::after {
+    top: 8px;
+  }
+  .greedy-nav__toggle[aria-expanded="true"] .navicon {
+    background: transparent;
+  }
+  .greedy-nav__toggle[aria-expanded="true"] .navicon::before {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .greedy-nav__toggle[aria-expanded="true"] .navicon::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  .hidden-links {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    background: #003459;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  .hidden-links li {
+    padding: 10px 20px;
+  }
+  .hidden-links a {
+    color: white;
+    text-decoration: none;
+  }
+  .hidden-links a:hover {
+    color: #87CEEB;
+  }
+  @media (max-width: 768px) {
+    .greedy-nav__toggle {
+      display: block;
+    }
+    .visible-links {
+      display: none;
+    }
+    .hidden-links[aria-expanded="true"] {
+      display: block;
+    }
+    .site-logo img {
+      max-height: 50px;
+    }
+    .masthead__menu-item a {
+      font-size: 1rem;
+    }
+  }
+</style>

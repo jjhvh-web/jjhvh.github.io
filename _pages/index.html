@@ -1,341 +1,297 @@
 ---
-title: "Welcome to OneFlow Jekyll Theme"
-
+title: "CleaningCompany"
 layout: page
-
 permalink: /
-
 header:
     overlay_image: /assets/images/header.webp
-    overlay_filter: rgba(0, 0, 0, 0.6)
-
+    # Remove overlay_filter to avoid dark overlay
+    # overlay_filter: rgba(0, 0, 0, 0.6)
     actions:
-        - label: "Get Started"
-          url: https://github.com/perstarke-webdev/oneflow-jekyll-theme?tab=readme-ov-file#oneflow-jekyll-theme
+        - label: "Contact Formulier"
+          url: "#contact"     
           blank: true
-        - label: "Download Theme"
-          url: /theme-download/oneflow-jekyll-theme.zip/
-          blank: false
-        - label: "Minimal Mistakes, the base for this theme"
-          url: https://github.com/mmistakes/minimal-mistakes
-          blank: true
-
-    caption: "Photo by **[Alexandros Margo Photography](https://www.instagram.com/alexandrosmargo?igsh=eHl2cGx0amVocmJi)**"
-
-excerpt: "**Crafting effortless One-Pager Websites**"
-
-
-
+caption: "Foto door **[Alexandros Margo Photography](https://www.instagram.com/alexandrosmargo?igsh=eHl2cGx0amVocmJi)**"
+excerpt: "**Professionele raamreiniging in Nederland**"
 gallery:
     - url: /assets/images/header.webp
       image_path: /assets/images/header.webp
-      alt: "placeholder image 1"
-      title: "Image 1 title caption"
+      alt: "placeholder afbeelding 1"
+      title: "Afbeelding 1 titel onderschrift"
     - url: /assets/images/sydney-2.webp
       image_path: /assets/images/sydney-2.webp
-      alt: "placeholder image 2"
-      title: "Image 2 title caption"
+      alt: "placeholder afbeelding 2"
+      title: "Afbeelding 2 titel onderschrift"
     - url: /assets/images/sydney-3.webp
       image_path: /assets/images/sydney-3.webp
-      alt: "placeholder image 3"
-      title: "Image 3 title caption"
-
-
+      alt: "placeholder afbeelding 3"
+      title: "Afbeelding 3 titel onderschrift"
 round-images:
     - image-path: "/assets/images/header.webp"
       size: "full"
-      header: "Header 1"
-      caption: "Caption 1"
+      header: "Glasbewassing"
+      caption: "Onderschrift 1"
     - image-path: "/assets/images/sydney-2.webp"
       size: "third"
-      header: "Header 2"
-      caption: "Caption 2"
+      header: "Gevelreiniging"
+      caption: "Onderschrift 2"
     - image-path: "/assets/images/sydney-3.webp"
       size: "third"
-      header: "Header 3"
-      caption: "Caption 3"
+      header: "Hoge druk reiniging"
+      caption: "Onderschrift 3"
     - image-path: "/assets/images/sydney-4.webp"
       size: "third"
-      header: "Header 4"
-      caption: "Caption 4"
+      header: "Daken reiniging"
+      caption: "Onderschrift 4"
     - image-path: "/assets/images/sydney-5.webp"
       size: "half"
-      header: "Header 5"
-      caption: "Caption 5"
-    - image-path: "/assets/images/sydney-6.webp"
-      size: "half"
-      header: "Header 6"
-      caption: "Caption 6"
-
+      header: "Hout en plaat reiniging"
+      caption: "Onderschrift 5"
 image-text-row:
-    - header: "Image-Text-Row"
-      excerpt: "This is an image-text-row"
-      image-url: "/assets/images/header.webp"
-      alt-text: "Alternative text for the image"
+    - header: "Gevelreiniging Demo"
+      excerpt: "Bekijk ons gevelreinigingsproces in actie."
+      image-url: ""  # Leeg omdat we video in HTML beheren
+      alt-text: "Gevelreiniging video"
       image-width: "400px"
       image-right: false
-
-image-text-row-two:
-    - header: "Image-Text-Row"
-      excerpt: "This is an image-text-row with the image on the right (on large enough screens) and a little bit longer text plus a button"
-      btn-url: "#"
-      btn-class: "info"
-      btn-label: "A button"
-      blank: false
-      image-url: "/assets/images/sydney-2.webp"
-      alt-text: "Alternative text for the image"
-      image-width: "400px"
-      image-right: true
 ---
 
-<section class="site-section alternative-color first-section" id="section-1">
+<!-- Custom Masthead within Header -->
 
-    <h1>This is OneFlow Jekyll Theme. Section 1, in alternative color</h1>
 
-    <h2>Practical Design</h2>
-
-    <p>With its practical design and intuitive layout, OneFlow offers a seamless user experience for showcasing your content.</p>
-
-    <a href="https://oneflow-jekyll-theme-example-one.github.io/" rel="noopener noreferrer nofollow" target="_blank" class="btn btn--primary">
-        Theme Example Website One
-    </a>
-    <a href="https://oneflow-jekyll-theme-example-two.github.io/" rel="noopener noreferrer nofollow" target="_blank" class="btn btn--primary">
-        Theme Example Website Two
-    </a>
-    <a href="https://perstarke-webdev.de/canvas" rel="noopener noreferrer nofollow" target="_blank" class="btn btn--info">
-        Also check out the Homepage Canvas
-    </a>
-
-    <h2>Open-Source & free to use</h2>
-
-    OneFlow is licensed under the <a href="https://opensource.org/license/mit/" rel="noopener noreferrer nofollow" target="_blank">MIT License</a>.
-    That means, you can freely copy, use and customize it - whatever you like!
-
-    <h2>Drop in galleries, round images or image-text-rows</h2>
-
-    <h3>Gallery</h3>
-
-    {% include gallery caption="Gallery captions, just like the rest of the theme, **support Markdown**"%}
-
-    <h3> Round Images</h3>
-
-    {% include round-images %}
-
-    <h3> Image-Text-Rows</h3>
-
-    {% include image-text-row %}
-
-    <hr>
-
-    {% include image-text-row id="image-text-row-two" %}
-
-    <h2> Responsive Video Embed</h2>
-
-    {% include video id="xTo8Q9asVfc" provider="youtube" %}
-
+<section class="site-section alternative-color first-section" id="section-1" style="padding-top: 80px; background-color: #0077BE;">
+    <h2 style="color: white;"><strong>Onze specialiteiten</strong></h2>
+    <div class="specialiteiten-grid">
+        <div class="specialiteit-card">
+            <video controls autoplay loop muted playsinline style="width: 100%; height: auto;">
+                <source src="/assets/videos/gevelreiniging-video.mp4" type="video/mp4">
+                Uw browser ondersteunt de videotag niet.
+            </video>
+            <h4 style="color: white;">Gevelreiniging</h4>
+        </div>
+        <div class="specialiteit-card">
+            <img src="/assets/images/glazen.jpg" alt="Glasbewassing afbeelding" style="width: 100%; height: auto;">
+            <h4 style="color: white;">Glasbewassing</h4>
+        </div>
+        <div class="specialiteit-card">
+            <video controls autoplay loop muted playsinline style="width: 100%; height: auto;">
+                <source src="/assets/videos/specialistische-schoonmaak.mp4" type="video/mp4">
+                Uw browser ondersteunt de videotag niet.
+            </video>
+            <h4 style="color: white;">Specialistische schoonmaak</h4>
+        </div>
+        <div class="specialiteit-card">
+            <video controls autoplay loop muted playsinline style="width: 100%; height: auto;">
+                <source src="/assets/videos/hout-en-plaat-reiniging.mp4" type="video/mp4">
+                Uw browser ondersteunt de videotag niet.
+            </video>
+            <h4 style="color: white;">Hout en plaat reiniging</h4>
+        </div>
+    </div>
 </section>
 
-
-
-
-
-
-<hr class="section-sep">
-
-
-
-
-
-
-
-<section class="site-section" id="section-2">
-
-    <h1>This is OneFlow Jekyll Theme. Section 2, in normal color</h1>
-
-    <h2>Utilities</h2>
-
-    <h3>Notices</h3>
-
+<section class="site-section" id="section-2" style="padding-top: 80px;">
+    <h1>Waarom ons</h1>
+    <h3>Ons streven naar excellentie</h3>
     <div class="notice">
-        <h4>Notice</h4>
-        <p>This is a notice. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h4>Kwaliteitsdienst</h4>
+        <p>Bij CleaningCompany leveren we streeploze, sprankelende ramen voor woningen en bedrijven in heel Nederland.</p>
     </div>
-
     <div class="notice--primary">
-        <h4>Primary Notice</h4>
-        <p>This is a pirmary notice. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h4>Professioneel team</h4>
+        <p>Onze bekwame schoonmakers zijn getraind om ramen van alle soorten te behandelen, waardoor een vlekkeloze afwerking wordt gegarandeerd.</p>
     </div>
-
     <div class="notice--success">
-        <h4>Success Notice</h4>
-        <p>This is a success notice. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h4>Duurzame oplossingen</h4>
+        <p>We gebruiken milieuvriendelijke reinigingsproducten om uw ramen schoon te houden en de planeet groen.</p>
     </div>
-
     <div class="notice--warning">
-        <h4>Warning Notice</h4>
-        <p>This is a warning notice. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h4>Betrouwbare planning</h4>
+        <p>Punctueel en betrouwbaar, we werken rond uw schema om een naadloze raamreinigingsdienst te bieden.</p>
     </div>
-
     <div class="notice--danger">
-        <h4>Danger Notice</h4>
-        <p>This is a danger notice. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h4>Veiligheid eerst</h4>
+        <p>Onze team volgt strikte veiligheidsprotocollen om uw eigendom te beschermen en een veilige reinigingsprocedure te garanderen.</p>
     </div>
-
     <div class="notice--info">
-        <h4>Info Notice</h4>
-        <p>This is an info notice. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h4>Toegankelijke tarieven</h4>
+        <p>Geniet van topkwaliteit raamreiniging tegen concurrerende prijzen, met transparante offertes en geen verborgen kosten.</p>
     </div>
-
-    <hr>
-
-    <h3>Boxes of different sizes in a container</h3>
-
-    <div class="box-container">
-
-        <div class="box">
-            <h4>Box</h4>
-            <p>Text in a box</p>
-        </div>
-
-        <div class="box box--primary box-half">
-            <h4>Primary Box</h4>
-            <p>Text in a box</p>
-        </div>
-
-        <div class="box box--success box-half">
-            <h4>Success Box</h4>
-            <p>Text in a box</p>
-        </div>
-
-        <div class="box box--warning box-third">
-            <h4>Warning Box</h4>
-            <p>Text in a box</p>
-        </div>
-
-        <div class="box box--danger box-third">
-            <h4>Danger Box</h4>
-            <p>Text in a box</p>
-        </div>
-
-        <div class="box box--info box-third">
-            <h4>Info Box</h4>
-            <p>Text in a box</p>
-        </div>
-
-    </div>
-
-    <hr>
-
-    <h3>Buttons</h3>
-
-    <a href="#" class="btn btn--primary">Primary Button</a>
-    <a href="#" class="btn btn--success">Success Button</a>
-    <a href="#" class="btn btn--warning">Warning Button</a>
-    <a href="#" class="btn btn--danger">Danger Button</a>
-    <a href="#" class="btn btn--info">Info Button</a>
-    <a href="#" class="btn btn--inverse">Inverse Button</a>
-    <br><br>
-    <a href="#" class="btn btn--primary btn--x-large">Extra Large Button</a>
-    <a href="#" class="btn btn--primary btn--large">Large Button</a>
-    <a href="#" class="btn btn--primary">Default Button</a>
-    <a href="#" class="btn btn--primary btn--small">Small Button</a>
-
-
-
 </section>
 
+<section class="site-section alternative-color services-section" id="section-3" style="padding-top: 80px;">
+    <h1>Onze diensten</h1>
+    <div class="container">
+        <p class="section-subtitle">Professionele reinigingsdiensten voor elk type gebouw</p>
+        <div id="servicesContainer">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-icon"><i class="fas fa-building"></i></div>
+                <h3>Glasbewassing</h3>
+                <p>Geniet van kristalheldere ramen met onze professionele glazenschoonmaakdiensten. Ons bekwame team gebruikt veilige, hoogwaardige methoden om streeploze resultaten te garanderen.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Osmosewater technologie</li>
+                    <li><i class="fas fa-check"></i> Binnen & buiten reiniging</li>
+                    <li><i class="fas fa-check"></i> Kozijnen inclusief</li>
+                </ul>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-icon"><i class="fas fa-home"></i></div>
+                <h3>Gevelreiniging</h3>
+                <p>Transformeer de buitenkant van uw eigendom met onze deskundige gevelreinigingsdiensten. Met geavanceerde technieken verwijderen we vuil en gruis.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Soft-wash techniek</li>
+                    <li><i class="fas fa-check"></i> Algenverwijdering</li>
+                    <li><i class="fas fa-check"></i> Impregneermogelijkheden</li>
+                </ul>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-icon"><i class="fas fa-spray-can"></i></div>
+                <h3>Hoge Druk Reiniging</h3>
+                <p>Krachtige reiniging voor terrassen, opritten en gevels met milieuvriendelijke oplossingen.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Tot 200 bar druk</li>
+                    <li><i class="fas fa-check"></i> Heet water optie</li>
+                    <li><i class="fas fa-check"></i> Milieuvriendelijke middelen</li>
+                </ul>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-icon"><i class="fas fa-solar-panel"></i></div>
+                <h3>Hout en Plaat Reiniging</h3>
+                <p>Behoud de schoonheid en levensduur van uw houten en plaatoppervlakken met zachte reinigingsmethoden.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Zachte technieken</li>
+                    <li><i class="fas fa-check"></i> Vlekverwijdering</li>
+                    <li><i class="fas fa-check"></i> Structuurbehoud</li>
+                </ul>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="service-icon"><i class="fas fa-brush"></i></div>
+                <h3>Specialistische Reiniging</h3>
+                <p>Deskundige reiniging voor unieke uitdagingen, met precisie en zorg voor delicate oppervlakken.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Gespecialiseerde technieken</li>
+                    <li><i class="fas fa-check"></i> Delicate oppervlakken</li>
+                    <li><i class="fas fa-check"></i> Op maat gemaakte oplossingen</li>
+                </ul>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="service-icon"><i class="fas fa-bug"></i></div>
+                <h3>Spin en Insect Bestrijding</h3>
+                <p>Effectieve bestrijding van spinnen en insecten met veilige en milieuvriendelijke methoden.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Veilige methoden</li>
+                    <li><i class="fas fa-check"></i> Milieuvriendelijke producten</li>
+                    <li><i class="fas fa-check"></i> Preventieve maatregelen</li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            // Function to split text content into spans if not already split
+            function splitTextToSpans(targetElement) {
+                if (targetElement && !targetElement.classList.contains('text-split')) {
+                    const text = targetElement.textContent.trim();
+                    targetElement.innerHTML = '';
+                    const words = text.split(' ');
+                    words.forEach((word, wordIndex) => {
+                        const wordSpan = document.createElement('span');
+                        wordSpan.classList.add('word');
+                        for (let character of word) {
+                            const span = document.createElement('span');
+                            span.textContent = character;
+                            wordSpan.appendChild(span);
+                        }
+                        if (wordIndex < words.length - 1) wordSpan.innerHTML += '&nbsp;';
+                        targetElement.appendChild(wordSpan);
+                    });
+                    targetElement.classList.add('text-split');
+                }
+            }
 
-
-
-
-
-
-
-<hr class="section-sep">
-
-
-
-
-
-
-
-<section class="site-section alternative-color" id="section-3">
-
-    <h1>This is OneFlow Jekyll Theme. Section 3</h1>
-
-    <h2>Easy customization</h2>
-
-    <h3>Color skins</h3>
-
-    OneFlow offers various color skins, easily settable in the <code>_config.yml</code> file.
-
-    <h3>Masthead</h3>
-
-    The masthead is set to sticky, so it always stays visible. You can easily change that in the <code>_config.yml</code> file. <br>
-    You can also set the opacity of the masthead there.<br>
-    Of course, the navigation links also can easily be changed, in <code>/_data/navigation.yml</code>.<br>
-    The masthead can show your logo, the site title or the site title + a subtitle.
-
-    <h3>Footer</h3>
-
-    The links, copyright and creator in the footer can easily be set in the <code>_config.yml</code> file.
-
-    <h3>Custom stylesheet, custom fonts</h3>
-    Add your own styles in <code>/assets/css/custom-styles.css</code>,
-    <span style="font-family: 'Great Vibes';"> and easily apply any font you want. </span>
-
-    <h3>Cookie / cdn-usage consent banner</h3>
-    OneFlow comes with a build-in popup banner that you can easily turn on and off plus customize to suit your needs.
-    The existing version of the popup is a suggestion and should (no legal advice given) fulfill german laws regarding
-    cookie and cdn-usage consent.
-
+            // Animate text on load
+            document.addEventListener('DOMContentLoaded', () => {
+                const services = document.querySelectorAll('.service-card p');
+                services.forEach(service => {
+                    splitTextToSpans(service);
+                    const spans = service.querySelectorAll('span');
+                    spans.forEach((span, index) => {
+                        span.style.opacity = 0;
+                        setTimeout(() => {
+                            span.style.transition = 'opacity 0.5s ease';
+                            span.style.opacity = 1;
+                        }, index * 20);
+                    });
+                });
+            });
+        </script>
+    </div>
 </section>
 
+<section class="site-section" id="section-4" style="padding-top: 80px;">
+    <h1>Over ons</h1>
+    <p>We zijn een beginnend enthousiast team dat zich inzet voor excellente schoonmaakdiensten. Met passie en toewijding werken we aan een schone en veilige omgeving voor iedereen.</p>
+</section>
 
+<!-- Contact Form Section -->
+<!-- Contact Form Section -->
+<section class="site-section contact-section" id="contact" style="padding-top: 80px;">
+    <div class="container">
+        <h2 class="section-title">Vraag een Gratis Offerte Aan</h2>
+        <p class="section-subtitle">Binnen 24 uur reactie gegarandeerd</p>
 
+        <div class="contact-grid">
+            <div class="contact-form">
+                <form id="contact-form" method="POST" action="/contact-submit">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Naam *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Telefoon *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Dienst</label>
+                            <select id="service" name="service">
+                                <option>Glasbewassing</option>
+                                <option>Gevelreiniging</option>
+                                <option>Hoge druk reiniging</option>
+                                <option>Zonnepanelen reiniging</option>
+                                <option>Specialistische reiniging</option>
+                                <option>Spin en insect bestrijding</option>
+                                <option>Anders</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Bericht</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--large">
+                        <i class="fas fa-paper-plane"></i> Verstuur Aanvraag
+                    </button>
+                </form>
+            </div>
 
-
-
-
-<hr class="section-sep">
-
-
-
-
-
-
-
-
-<section class="site-section" id="section-4">
-
-    <h1>This is OneFlow Jekyll Theme. Section 4</h1>
-
-    <h2>Easy local build with docker</h2>
-
-    OneFlow comes with build-in docker configuration using
-    <a href="https://github.com/BretFisher/jekyll-serve" rel="noopener noreferrer nofollow" target="_blank">BretFisher's jekyll serve</a>.
-    Just open up a terminal, navigate to your site and run <code>docker-compose up</code>. Easy as that. 
-
-    <h2>Client editables</h2>
-
-    {% include /editables/editables.html %}
-
-    <h2>HTML and Markdown</h2>
-
-    Use raw and flexible HTML or clear markdown to write your content.
-    Markdown is rendered with <a href="https://kramdown.gettalong.org/" rel="noopener noreferrer nofollow" target="_blank">kramdown</a>,
-    which supports applying css classes to the Markdown. That means, you can add notices, boxes and other utilities even to your Markdown content,
-    as simple as <code>"Text you want to add the classes to {: .class1 .class2}"</code>.
-
-    <h2>Icons with Font Awesome</h2>
-
-    Add icons anywhere, using <a href="https://fontawesome.com/" rel="noopener noreferrer nofollow" target="_blank"><i class="fa-solid fa-font-awesome"></i> Font Awesome</a>.
-    Locally hosted and directly build into OneFlow, ready to be applied.
-
-    <h2>Responsive design</h2>
-
-    All of OneFlows features are 100% responsive and adapt to different screen sizes, so your site looks good
-    on all devices!
-
-
+            <div class="contact-info">
+                <div class="info-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <a href="mailto:info@crystalclearwindows.nl">info@crystalclearwindows.nl</a>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h4>Openingstijden</h4>
+                    <p><strong>Maandag - Vrijdag:</strong> 07:00 - 18:00</p>
+                    <p><strong>Zaterdag:</strong> 08:00 - 16:00</p>
+                    <p><strong>Zondag:</strong> Op aanvraag</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
