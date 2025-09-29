@@ -133,20 +133,26 @@
     color: #87CEEB;
   }
   @media (max-width: 768px) {
-    .greedy-nav__toggle {
-      display: block;
+    .masthead .greedy-nav__toggle {
+      display: none !important; /* Force hide hamburger menu on mobile */
     }
-    .visible-links {
-      display: none;
+    .masthead .visible-links {
+      display: none !important; /* Force hide navigation links on mobile */
     }
-    .hidden-links[aria-expanded="true"] {
-      display: block;
+    .masthead .hidden-links {
+      display: none !important; /* Ensure hidden links stay hidden on mobile */
     }
-    .site-logo img {
+    .masthead .site-logo {
+      margin: 0 auto !important; /* Center the logo */
+    }
+    .masthead .site-logo img {
       max-height: 50px;
     }
-    .masthead__menu-item a {
-      font-size: 1rem;
+    .masthead__inner-wrap {
+      justify-content: center !important; /* Center the entire masthead content */
+    }
+    .masthead__menu {
+      justify-content: center !important; /* Center the menu container */
     }
   }
 </style>
