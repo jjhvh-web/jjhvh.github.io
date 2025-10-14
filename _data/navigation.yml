@@ -1,13 +1,15 @@
 main:
-  - title: "Onze specialiteiten"
-    url: /#section-1
-    blank: false
+  - title: "Home"
+    url: /
   - title: "Waarom ons"
     url: /#section-2
-    blank: false
-  - title: "Onze services"
+  - title: "Diensten"
     url: /#section-3
-    blank: false
   - title: "Over ons"
     url: /#section-4
-    blank: false
+  - title: "Contact"
+    url: /#contact
+  - title: "Algemene Voorwaarden"
+    url: /algemene-voorwaarden
+  - title: "Privacy- en cookieverklaring"
+    url: /privacy

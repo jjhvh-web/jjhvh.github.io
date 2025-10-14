@@ -1,0 +1,25 @@
+<div id="cookie-banner" class="glass cookie-banner">
+  <p>
+    Deze website gebruikt een content delivery network (CDN) via Netlify om inhoud betrouwbaar weer te geven. Hierbij kunnen niet-persoonlijke gegevens, zoals uw IP-adres en pagina-gebruik, worden verwerkt. Wij plaatsen een consentcookie (<code>cookieConsent=1</code>, 1 dag geldig) om uw toestemming vast te leggen.
+  </p>
+  <p>
+    Sterk in Glans verwerkt persoonsgegevens (bijv. naam, e-mail, telefoonnummer via het contactformulier) conform de AVG, uitsluitend voor het uitvoeren van overeenkomsten en communicatie. Gegevens worden niet gedeeld met derden, behalve voor hosting of wettelijke verplichtingen. Zie onze <a href="/privacy">Privacy en Cookieverklaring</a> voor meer informatie.
+  </p>
+  <button class="btn btn--primary" id="cookie-consent-btn">Akkoord</button>
+</div>
+
+<!-- JavaScript for cookie consent banner -->
+<script>
+  if (document.cookie.indexOf('cookieConsent=1') !== -1) {
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+
+  function setCookieConsent() {
+    document.getElementById('cookie-banner').style.display = 'none';
+    var expiresDate = new Date();
+    expiresDate.setDate(expiresDate.getDate() + 1);
+    document.cookie = 'cookieConsent=1; expires=' + expiresDate.toUTCString() + '; path=/';
+  }
+
+  document.getElementById('cookie-consent-btn').addEventListener('click', setCookieConsent);
+</script>
